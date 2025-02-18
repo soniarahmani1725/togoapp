@@ -1,0 +1,26 @@
+GET http://localhost:8080/
+
+####
+   
+POST http://localhost:8080/signup
+Content-Type: application/json
+
+{
+    "firstName": "Toufik ",
+    "lastName": "Rahmani",
+    "country": "Algeria",
+    "phone": "0555555555",
+    "email": "rahmanitoufik1200@gmail.com",
+    "password": "123456",
+    "confirmPassword": "123456"
+}
+
+####
+
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+    "email": "s.rahmani@lillybelle.eu",
+    "password": "toufik"
+    }

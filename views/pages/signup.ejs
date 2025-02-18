@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/imgs/logo-togo.png">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="/styles/signup.css">
+</head>
+<body>
+
+    <main>
+        <img src="imgs/logo-togo.png" alt="LiliBelle Logo" class="logo" onclick="window.location.href='/'">
+        <h3>Let's get started</h3>
+        <form action="/signup" method="POST" onsubmit="return validateForm()">
+            <div>
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="firstName" required>
+            </div>
+            <div>
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="lastName" required>
+            </div>
+            <div>
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">Select Country</option>
+                    <option value="us">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="fr">France</option>
+                    <option value="de">Germany</option>
+                    <option value="in">India</option>
+                    <option value="jp">Japan</option>
+                    <option value="ne">Niger</option>
+                    <option value="dz">Algeria</option>
+                </select>
+            </div>
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div>
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirmPassword" required>
+            </div>
+            <div>
+                <button type="submit">Signup</button>
+            </div>
+            <p>Already have an account?</p><a class="alreadyhaveaccount" href="/login"> Login</a>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <link rel="stylesheet" href="/styles/footer.css">
+        <div class="footer-content">
+          <a href="https://fr-fr.facebook.com/Lillybelle.Sarl/" target="_blank" class="footer-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="Facebook" class="footer-icon" />
+            Facebook
+          </a>
+          <a href="https://www.linkedin.com/company/lillybelle/posts/?feedView=all" target="_blank" class="footer-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="footer-icon" />
+            LinkedIn
+          </a>
+          <a href="mailto:your-email@example.com" class="footer-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" class="footer-icon" />
+            info@lillybelle.eu 
+          </a>
+          <a href="tel:+1234567890" class="footer-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone" class="footer-icon" />
+            +(33) 6 08 74 05 17
+          </a>
+        </div>
+        <p class="text-center text-muted">&copy; Copyright 2014 The Awesome People</p>
+    </footer>  
+</body>
+</html>

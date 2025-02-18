@@ -1,0 +1,108 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+/* Full-Page Background Slideshow */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+}
+
+@keyframes changeBackground {
+    0% { background-image: url('/imgs/poto.jpg'); }
+    33% { background-image: url('/imgs/k7lochatdhk.jpeg'); }
+    66% { background-image: url('/imgs/potohmermlt7t.jpg'); }
+    100% { background-image: url('/imgs/naturefelwestpoto.jpeg'); }
+}
+
+body {
+    animation: changeBackground 9s infinite; /* 3 images, 3 sec each */
+}
+.form-logo {
+    width: 250px;
+}
+/* Centered Login Form */
+main {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 50px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    color: white;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    border: 1px solid #ffcc00;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Login Button */
+button {
+    padding: 12px;
+    background: #ffcc00;
+    color: black;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #ffaa00;
+    transform: scale(1.05);
+}
+
+/* "Don't have an account?" link */
+.alreadyhaveaccount {
+    text-decoration: none;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    transition: 0.3s;
+}
+
+.alreadyhaveaccount:hover {
+    color: #ffcc00;
+}
+
+footer {
+    margin-top: 200px;
+    width: 100%;
+}

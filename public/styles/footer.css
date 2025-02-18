@@ -1,0 +1,46 @@
+.footer {
+    background-color: #425F84; /* Dark background */
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: center; /* Center the content */
+    gap: 20px; /* Space between items */
+  }
+  
+  .footer-link {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    color: #ffffff; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem;
+    transition: color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .footer-link:hover {
+    color: #4f90ff; /* Highlight on hover */
+  }
+  
+  .footer-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); /* Makes icons white for dark backgrounds */
+    transition: transform 0.3s ease; /* Smooth hover scale effect */
+  }
+  
+  .footer-link:hover .footer-icon {
+    transform: scale(1.2); /* Icon grows slightly on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column; /* Stack items vertically for smaller screens */
+      gap: 15px;
+    }
+  }
+  

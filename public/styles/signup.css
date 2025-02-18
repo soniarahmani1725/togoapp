@@ -1,0 +1,145 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+/* Full-Page Background Slideshow */
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-image 4s ease-in-out;
+}
+
+@keyframes changeBackground {
+    0% { background-image: url('/imgs/k7lochatdhk.jpeg'); }
+    50% { background-image: url('/imgs/potohmermlt7t.jpg'); }
+    100% { background-image: url('/imgs/naturefelwestpoto.jpeg'); }
+}
+
+body {
+    animation: changeBackground 9s infinite; /* 4 images, 3 sec each */
+}
+
+/* Centered Form */
+main {
+    background: rgba(255, 255, 255, 0.2); /* Transparent Glass Background */
+    padding: 25px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input Fields */
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    color: white;
+}
+option {
+    background: black
+}
+
+input::placeholder, select {
+    color: white;
+    opacity: 0.8;
+}
+
+input:focus, select:focus {
+    border: 2px solid #ffcc00;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Signup Button */
+button {
+    padding: 12px;
+    background: #ffcc00;
+    color: black;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #ffaa00;
+    transform: scale(1.05);
+}
+
+/* Header & Footer */
+header {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Logo */
+.logo {
+    width: 180px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Already Have an Account Link */
+.alreadyhaveaccount {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.alreadyhaveaccount:hover {
+    color: #ffcc00;
+    opacity: 1;
+}

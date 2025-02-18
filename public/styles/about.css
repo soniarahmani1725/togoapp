@@ -1,0 +1,177 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Dark Background */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom right, #111, #222);
+    color: #ddd;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    padding: 50px 0;
+}
+
+/* Text Content */
+.text-content {
+    width: 50%;
+}
+
+.text-content h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #ffcc00;
+}
+
+.text-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #bbb;
+}
+
+/* Visual Content */
+.visual-content {
+    width: 50%;
+    text-align: center;
+}
+
+.visual-content img {
+    max-width: 100%;
+    animation: float 4s ease-in-out infinite;
+}
+
+.office-location {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: #ffcc00;
+}
+
+/* Partner Logos */
+.partners {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.partners h2 {
+    color: #ffcc00;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Individual Logos */
+.logos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logos-container img {
+    max-width: 120px;
+    height: auto;
+    filter: brightness(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+.logos-container img:hover {
+    transform: scale(1.1);
+}
+/* Partner Logos */
+.partners {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.partners h2 {
+    color: #ffcc00;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Full Image Section */
+.full-logo-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.full-logo-image img {
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+
+}
+
+/* Individual Logos */
+.logos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logos-container img {
+    max-width: 120px;
+    height: auto;
+    filter: brightness(0.9);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.logos-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to right, #222, #111);
+    padding: 20px 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    color: #ffcc00;
+}
+
+/* Footer Icons */
+.footer-icon {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) invert(1);
+}

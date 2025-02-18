@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Togo Insight</title>
+  <link rel="icon" type="image/x-icon" href="/imgs/logo-togo.png">
+  <link rel="stylesheet" href="/styles/home.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="imgs/logo-togo.png">
+      <div class="logoktiba"> Togo<span>-insight</span></div>
+    </div>
+  
+    <nav>
+      <a href="/">Home</a> 
+      <a href="/services">Services</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  
+    <!-- Authentication buttons (Signup & Login) -->
+    <div class="contact" id="auth-buttons">
+      <button class="contact-button" onclick="window.location.href='/signup'">Signup</button>
+      <button class="contact-button" onclick="window.location.href='/login'">Login</button>
+    </div>
+  
+    <!-- User greeting & Logout button (hidden by default) -->
+    <div class="user-greeting" id="user-section" style="display: none;">
+      <p>Bienvenue, <span id="username"></span>!</p>
+      <button class="contact-button" id="logout-button">Logout</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Solutions de mesure et d'optimisation de la Qualité de Service sur les réseaux cellulaires</h1>
+      <p>
+        Des solutions innovantes permettant de mesurer et d'optimiser la Qualité de Service sur les réseaux cellulaires,
+         garantissant des performances élevées et une meilleure expérience utilisateur.</p>
+      <div class="stats">
+        <div>
+          <p>60+</p>
+          <span>Clients Satisfaits</span>
+        </div>
+        <div>
+          <p>40+</p>
+          <span>Collaborateurs</span>
+        </div>
+        <div>
+          <p>200+</p>
+          <span>Clients Actifs Quotidiens</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="imgs/rajlchaydpc.jpeg" alt="rajlchaydpc">
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-image">
+      <img src="imgs/yedchaydaphone.jpeg" alt="yedchaydaphone">
+    </div>
+    <div class="hero-text">
+      <h1>Evaluer la qualité vocale sur les réseaux mobiles</h1>
+      <p>
+        évaluer la qualité vocale sur les réseaux mobiles, optez pour des équipements tels que les analyseurs PESQ/POLQA ou des plateformes de test comme Rohde & Schwarz ou Keysight,
+        spécialisés dans la mesure de la qualité audio.
+      </p>
+
+    </div>
+  </section>
+
+  <section class="hero">
+
+    <div class="hero-text">
+      <h1>Équipements de tests & mesure</h1>
+      <p>
+        Les équipements de tests et de mesure en télécommunication sont essentiels pour analyser et optimiser les performances des réseaux.
+        Ils incluent des analyseurs de spectre, des testeurs de protocoles, et des outils de mesure comme ceux de Rohde & Schwarz ou Keysight pour évaluer la qualité des signaux et des services.
+        Ces solutions garantissent des réseaux fiables et performants, adaptés aux exigences actuelles.
+      </p>
+    </div>
+    <div class="hero-image">
+      <img src="imgs/satilitflard.jpg" alt="yedchaydaphone">
+    </div>
+  </section>
+
+  <footer class="footer">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <div class="footer-content">
+      <a href="https://fr-fr.facebook.com/Lillybelle.Sarl/" target="_blank" class="footer-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="Facebook" class="footer-icon" />
+        Facebook
+      </a>
+      <a href="https://www.linkedin.com/company/lillybelle/posts/?feedView=all" target="_blank" class="footer-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="footer-icon" />
+        LinkedIn
+      </a>
+      <a href="mailto:your-email@example.com" class="footer-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" class="footer-icon" />
+        info@lillybelle.eu 
+      </a>
+      <a href="tel:+1234567890" class="footer-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone" class="footer-icon" />
+        +(33) 6 08 74 05 17
+      </a>
+    </div>
+    <p class="text-center text-muted">&copy; développé par Lillybelle 2025</p>
+  </footer>  
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", async function () {
+        try {
+            const response = await fetch("/api/user");
+            if (!response.ok) throw new Error("Not logged in");
+  
+            const user = await response.json();
+  
+            if (user.name) {
+                document.getElementById("username").innerText = user.name;
+                document.getElementById("user-section").style.display = "block";
+                document.getElementById("auth-buttons").style.display = "none";
+            }
+        } catch (error) {
+            console.error("User not logged in or error fetching user:", error);
+        }
+  
+        // Logout functionality
+        document.getElementById("logout-button").addEventListener("click", async () => {
+            try {
+                await fetch("/logout", { method: "POST" });
+                window.location.href = "/login"; // Redirect to login after logout
+            } catch (error) {
+                console.error("Logout failed:", error);
+            }
+        });
+    });
+  </script>
+  
+
+
+</body>
+</html>

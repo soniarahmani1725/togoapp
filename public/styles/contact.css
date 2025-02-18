@@ -1,0 +1,184 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Dark Background */
+body {
+    background: linear-gradient(to bottom right, #111, #222);
+    color: white;
+    text-align: center;
+}
+
+/* Hero Section */
+.contact-hero {
+    padding: 50px 20px;
+    background: #222;
+    color: #ffcc00;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.contact-hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.contact-hero p {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+/* Contact Form & Map Side by Side */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    gap: 30px;
+}
+
+/* Contact Form */
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    animation: slideInLeft 1s ease-in-out;
+}
+
+/* Map Section */
+.map-container {
+    width: 50%;
+    animation: slideInRight 1s ease-in-out;
+}
+
+/* Input Fields */
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background: #ffcc00;
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #ffd633;
+    transform: scale(1.05);
+}
+
+/* Contact Information */
+.contact-info {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 30px;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Footer Styling */
+.footer {
+    width: 100%;
+    background: #222;
+    color: white;
+    padding: 20px 0;
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+/* Footer Container */
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Footer Links */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+/* Footer Icons */
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    color: #ffcc00;
+}
+
+.footer-icon {
+    width: 20px;
+    filter: brightness(0) invert(1);
+}
+
+/* Copyright */
+.text-muted {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}

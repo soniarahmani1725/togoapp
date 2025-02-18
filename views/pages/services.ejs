@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Services</title>
+    <link rel="icon" type="image/x-icon" href="/imgs/logo-togo.png">
+    <link rel="stylesheet" href="/styles/services.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <h1>Nos Services</h1>
+        <p>Gérez vos fichiers en toute simplicité avec nos outils d'upload et de téléchargement.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-container">
+        <div class="service-card">
+            <h2>📤 Upload de Fichiers</h2>
+            <p>Envoyez vos fichiers en toute sécurité.</p>
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" id="file-upload" required>
+                <button type="submit">Uploader</button>
+            </form>
+        </div>
+
+        <div class="service-card">
+            <h2>📥 Télécharger un Fichier</h2>
+            <p>Récupérez vos fichiers stockés.</p>
+            <a href="/download/sample.pdf" class="download-btn">Télécharger</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 LillyBelle. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
